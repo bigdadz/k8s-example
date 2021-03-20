@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kmutnb-game-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: kmutnb-gameß
+  template:
+    metadata:
+      labels:
+        component: kmutnb-gameß
+    spec:
+      containers:
+      - image: alexwhen/docker-2048
+        name: game-2048
+        ports:
+        - containerPort: 80
