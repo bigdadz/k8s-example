@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: kmutnb-gameß
+      component: kmutnb-game
   template:
     metadata:
       labels:
-        component: kmutnb-gameß
+        component: kmutnb-game
     spec:
       containers:
       - image: alexwhen/docker-2048
